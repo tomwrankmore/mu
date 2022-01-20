@@ -35,6 +35,7 @@ const LandingTextBox = styled.div`
 
     h1 {
         font-size: 5rem;
+        font-family: Helvetica, Arial, sans-serif;
     }
 
     ul {
