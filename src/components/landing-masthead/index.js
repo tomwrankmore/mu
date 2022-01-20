@@ -14,8 +14,10 @@ const mastHeadStyles = {
 }
 
 const LandingTextBox = styled.div` 
-    width: 650px;
-    height: 650px;
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 400px;
     background-color: whitesmoke;
     text-align: center;
     display: flex;
@@ -24,6 +26,12 @@ const LandingTextBox = styled.div`
     flex-direction: column;
     padding: 2rem;
     border: solid 0.25rem;
+
+    /* &:after {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+    } */
 
     h1 {
         font-size: 5rem;
@@ -78,8 +86,8 @@ const LandingMasthead = () => {
                     <li>coming soon</li>
                 </ul>
                 <div className='info'>
-                    <small>from the team behind <a href="https://brilliantcornerslondon.co.uk/" target="_blank">brilliant corners</a></small>
-                    <a href="https://www.instagram.com/mu.ldn/" target="_blank">@mu.ldn</a>
+                    <small>from the team behind <a href="https://brilliantcornerslondon.co.uk/" target="_blank" rel="noreferrer">brilliant corners</a></small>
+                    <a href="https://www.instagram.com/mu.ldn/" target="_blank" rel="noreferrer">@mu.ldn</a>
                 </div>
             </LandingTextBox>
         </BgImage>
