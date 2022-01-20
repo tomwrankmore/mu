@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Mu`,
+    description: `live music, robata grill, wine & cocktails, coming soon from the team behind brilliant corners.`,
+    author: `Tom Wrankmore`,
+    siteUrl: `http://mu-ldn.com/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
