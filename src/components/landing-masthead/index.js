@@ -55,6 +55,7 @@ const LandingMasthead = () => {
                     childImageSharp {
                     gatsbyImageData(
                         width: 2000, 
+                        placeholder: BLURRED,
                         quality: 50, 
                         webpOptions: {quality: 70}
                         )
