@@ -14,11 +14,9 @@ const mastHeadStyles = {
 }
 
 const LandingTextBox = styled.div` 
-    width: 100%;
-    height: 100%;
-    max-width: 400px;
-    max-height: 400px;
-    background-color: whitesmoke;
+    width: 500px;
+    height: 500px;
+    background-color: #f5f5f5e6;
     text-align: center;
     display: flex;
     align-items: center;
