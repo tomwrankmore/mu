@@ -14,8 +14,8 @@ const mastHeadStyles = {
 }
 
 const LandingTextBox = styled.div` 
-    width: 500px;
-    height: 500px;
+    width: 375px;
+    height: 375px;
     background-color: #f5f5f5e6;
     text-align: center;
     display: flex;
@@ -25,15 +25,8 @@ const LandingTextBox = styled.div`
     padding: 2rem;
     border: solid 0.25rem;
 
-    /* &:after {
-        content: '';
-        display: block;
-        padding-bottom: 100%;
-    } */
-
     h1 {
-        font-size: 5rem;
-        font-family: Helvetica, Arial, sans-serif;
+        
     }
 
     ul {
@@ -44,6 +37,12 @@ const LandingTextBox = styled.div`
             &:not(:last-child) {
                 margin: 0 0 0.25rem 0;
             }
+            &:last-child {
+                margin-top: 2rem;
+                padding: 0.5rem 0;
+                border-top: 1px solid;
+                border-bottom: 1px solid;
+            }
         }
     }
     .info {
@@ -52,6 +51,19 @@ const LandingTextBox = styled.div`
             display: block;
         }
     }
+`
+const Logo = styled.h1` 
+    position: relative;
+    padding-left: 35px;
+    font-size: 4rem;
+    font-family: Helvetica, Arial, sans-serif;
+    margin-top: 2rem;
+`
+const InvertedQ = styled.span` 
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
 `
 
 const LandingMasthead = () => {
@@ -77,17 +89,17 @@ const LandingMasthead = () => {
     return (
         <BgImage image={pluginImage} style={mastHeadStyles}>
             <LandingTextBox>
-                <h1>mu</h1>
+                <Logo><InvertedQ>&#8221;</InvertedQ>mu&#8221;</Logo>
                 <ul>
                     <li>live music</li>
                     <li>robata grill</li>
                     <li>wine &amp; cocktails </li>
-                    <li>coming soon</li>
+                    <li><b>coming soon</b></li>
                 </ul>
-                <div className='info'>
+                {/* <div className='info'>
                     <small>from the team behind <a href="https://brilliantcornerslondon.co.uk/" target="_blank" rel="noreferrer">brilliant corners</a></small>
                     <a href="https://www.instagram.com/mu.ldn/" target="_blank" rel="noreferrer">@mu.ldn</a>
-                </div>
+                </div> */}
             </LandingTextBox>
         </BgImage>
     )
