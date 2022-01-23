@@ -23,7 +23,7 @@ const LandingTextBox = styled.div`
     justify-content: center;
     flex-direction: column;
     padding: 2rem;
-    border: solid 0.25rem;
+    border: solid 2px;
 
     h1 {
         
