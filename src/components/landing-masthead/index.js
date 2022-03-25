@@ -3,15 +3,21 @@ import {graphql, useStaticQuery} from 'gatsby'
 import styled from 'styled-components'
 import {getImage} from 'gatsby-plugin-image'
 import {BgImage} from 'gbimage-bridge'
+import Logo from '../logo'
 
 const mastHeadStyles = {
     width: '100%', 
-    minHeight: '100vh',
+    height: '100%',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: '3rem',
 }
+
+const HeroWrapper = styled.div`
+    padding: 1rem;
+    width: 100vw;
+    height: 100vh;
+`
 
 const LandingTextBox = styled.div` 
     width: 375px;
@@ -40,8 +46,8 @@ const LandingTextBox = styled.div`
             &:last-child {
                 margin-top: 2rem;
                 padding: 0.5rem 0;
-                border-top: 1px solid;
-                border-bottom: 1px solid;
+                border-top: 1px solid #00000030;
+                border-bottom: 1px solid #00000030;
             }
         }
     }
@@ -51,19 +57,6 @@ const LandingTextBox = styled.div`
             display: block;
         }
     }
-`
-const Logo = styled.h1` 
-    position: relative;
-    padding-left: 35px;
-    font-size: 4rem;
-    font-family: Helvetica, Arial, sans-serif;
-    margin-top: 2rem;
-`
-const InvertedQ = styled.span` 
-    transform: rotateY(180deg);
-    position: absolute;
-    top: 0;
-    left: 0;
 `
 
 const LandingMasthead = () => {
@@ -87,21 +80,23 @@ const LandingMasthead = () => {
     const pluginImage = getImage(backgroundImage123)
 
     return (
-        <BgImage image={pluginImage} style={mastHeadStyles}>
-            <LandingTextBox>
-                <Logo><InvertedQ>&#8221;</InvertedQ>mu&#8221;</Logo>
-                <ul>
-                    <li>live music</li>
-                    <li>robata grill</li>
-                    <li>wine &amp; cocktails </li>
-                    <li><b>coming soon</b></li>
-                </ul>
-                {/* <div className='info'>
-                    <small>from the team behind <a href="https://brilliantcornerslondon.co.uk/" target="_blank" rel="noreferrer">brilliant corners</a></small>
-                    <a href="https://www.instagram.com/mu.ldn/" target="_blank" rel="noreferrer">@mu.ldn</a>
-                </div> */}
-            </LandingTextBox>
-        </BgImage>
+        <HeroWrapper>
+            <BgImage image={pluginImage} style={mastHeadStyles}>
+                {/*<LandingTextBox>
+                    <Logo />
+                    <ul>
+                        <li>live music</li>
+                        <li>robata grill</li>
+                        <li>wine &amp; cocktails </li>
+                        <li><b>coming soon</b></li>
+                    </ul>
+                     <div className='info'>
+                        <small>from the team behind <a href="https://brilliantcornerslondon.co.uk/" target="_blank" rel="noreferrer">brilliant corners</a></small>
+                        <a href="https://www.instagram.com/mu.ldn/" target="_blank" rel="noreferrer">@mu.ldn</a>
+                    </div> 
+                </LandingTextBox>*/}
+            </BgImage>
+        </HeroWrapper>
     )
 }
 

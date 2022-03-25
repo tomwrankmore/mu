@@ -7,27 +7,33 @@
 
 import * as React from "react"
 import PropTypes from "prop-types"
-// import { useStaticQuery, graphql } from "gatsby"
+import styled from 'styled-components'
+import { useStaticQuery, graphql } from "gatsby"
 
-// import Header from "./header"
+import Header from "./header"
 import "./layout.css"
 
+const Main = styled.main` 
+`
+
 const Layout = ({ children }) => {
-  // const data = useStaticQuery(graphql`
-  //   query SiteTitleQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+
+  console.log('data', data.site.siteMetadata?.title)
 
   return (
     <>
-      {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div>
-        <main>{children}</main>
+        <Main>{children}</Main>
         {/* <footer
           style={{
             marginTop: `2rem`,
