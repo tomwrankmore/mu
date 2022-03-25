@@ -53,6 +53,12 @@ const NavLink = styled.a`
     background-color: #fff;
     display: block;
     box-shadow: 0px 0px 10px -1px rgba(0,0,0,1);
+    transition: all 0.1s ease-out;
+    text-transform: lowercase;
+    &:hover {
+      text-decoration: none;
+      transform: scale(1.025);
+    }
 `
 
 const Header = ({ siteTitle }) => (
