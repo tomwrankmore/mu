@@ -81,21 +81,7 @@ const LandingMasthead = () => {
 
     return (
         <HeroWrapper>
-            <BgImage image={pluginImage} style={mastHeadStyles}>
-                {/*<LandingTextBox>
-                    <Logo />
-                    <ul>
-                        <li>live music</li>
-                        <li>robata grill</li>
-                        <li>wine &amp; cocktails </li>
-                        <li><b>coming soon</b></li>
-                    </ul>
-                     <div className='info'>
-                        <small>from the team behind <a href="https://brilliantcornerslondon.co.uk/" target="_blank" rel="noreferrer">brilliant corners</a></small>
-                        <a href="https://www.instagram.com/mu.ldn/" target="_blank" rel="noreferrer">@mu.ldn</a>
-                    </div> 
-                </LandingTextBox>*/}
-            </BgImage>
+            <BgImage image={pluginImage} style={mastHeadStyles} />
         </HeroWrapper>
     )
 }

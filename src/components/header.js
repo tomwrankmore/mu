@@ -8,15 +8,17 @@ import {device} from './styles/mediaQueries'
 const StyledHeader = styled.header` 
   /* background-color: #f5f5f561; */
   width: calc(100vw - 2rem);
-  margin: 1rem 1rem 0;
+  margin: 0 1rem;
   position: fixed;
   z-index: 100;
-  padding: 2rem;
+  padding: 1rem 0 0.5rem 0;
   display: grid;
   grid-template-columns: 1fr;
+  background-color: white;
 
   @media ${device.mediaMinMedium} {
     grid-template-columns: 150px 1fr;
+    height: auto;
   }
 `
 
@@ -52,12 +54,22 @@ const NavLink = styled.a`
     border-radius: 5px;
     background-color: #fff;
     display: block;
-    box-shadow: 0px 0px 10px -1px rgba(0,0,0,1);
     transition: all 0.1s ease-out;
     text-transform: lowercase;
     &:hover {
-      text-decoration: none;
-      transform: scale(1.025);
+      text-decoration: underline;
+    }
+`
+
+const StyledLink = styled(Link)`
+    padding: 0.5rem 0.875rem;
+    border-radius: 5px;
+    background-color: #fff;
+    display: block;
+    transition: all 0.1s ease-out;
+    text-transform: lowercase;
+    &:hover {
+      text-decoration: underline;
     }
 `
 
@@ -68,12 +80,12 @@ const Header = ({ siteTitle }) => (
     <Nav>
       <NavList>
         <li>
+          <StyledLink to="/listings/" target="_blank">listings</StyledLink>
+        </li>
+        <li>
           <NavLink href="https://mu.superbexperience.com/reserve/guests" target="_blank">reservations</NavLink>
         </li>
         {/* <li>
-          Drink
-        </li>
-        <li>
           Contact
         </li> */}
       </NavList>
