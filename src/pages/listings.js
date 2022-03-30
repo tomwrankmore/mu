@@ -7,14 +7,15 @@ import styled from "styled-components"
 import {device} from '../components/styles/mediaQueries'
 
 const Wrapper = styled.div`
-  padding:  200px 1rem 0;
+  padding: 170px 1rem 1rem;
   width: 100vw;
-  height: 100vh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   @media ${device.mediaMinMedium} {
     padding: 1rem;
+    height: 100vh;
   }
 `
 
