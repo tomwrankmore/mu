@@ -16,24 +16,27 @@ import "./layout.css"
 const Main = styled.main` 
   position: relative;
   z-index: 10;
-  /* margin-bottom: 167px; */
+  margin-bottom: 140px;
+  background-color: white;
 `
 
 const Footer = styled.footer` 
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   padding: 0 1rem 1rem;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   width: 100%;
   bottom: 0px;
   z-index: 1;
-  /* text-align: center; */
-  align-items: end;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  position: fixed;
+  bottom: 0;
+  z-index: 9;
 
   ul {
-    margin: 0;
+    margin: 0 0 1rem 0;
     padding: 0;
-    text-align: center;
 
     li {
       margin: 0;
@@ -63,22 +66,14 @@ const Layout = ({ children }) => {
       <div>
         <Main>{children}</Main>
         <Footer>
-            <div></div>
-            <div>
-              {/* <p>Opening Hours:</p> */}
-              <ul>
-                <li>Wed: 1700 - 23:30</li>
-                <li>Thu: 1700 - 23:30 </li>
-                <li>Fri: 1700 - 00:30</li>
-                <li>Sat: 1700 - 00:30</li>
-                <li>Sunday: 1600 - 23:00</li>
-              </ul>
-            </div>
-            <div>
-              <p>432-434 Kingsland Rd, <br/>London <br/>E8 4AA</p>
-            </div>
-            
-          {/* Mu | {new Date().getFullYear()} */}
+          <div>
+            <ul>
+              <li>Wed/Thu: 1700 - 2330</li>
+              <li>Fri/Sat: 1700 - 0030</li>
+              <li>Sun: 1600 - 2300</li>
+            </ul>
+            <p>432-434 Kingsland Rd, London E8 4AA</p>
+          </div>
         </Footer>
       </div>
     </>

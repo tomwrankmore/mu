@@ -68,7 +68,7 @@ const SecondPage = () => (
         <Listings>
           <Listing>
               <Artist>Ruta Sipola &amp; Menelik Claffey</Artist>
-              <Date>Wed 6th April 2022</Date>
+              <Date>Wednesday 6th April 2022</Date>
             </Listing>
           <Listing>
             <Artist> Leon Brichard, Idris Rahman &amp; Emre Ramazanoglu</Artist>
@@ -83,7 +83,7 @@ const SecondPage = () => (
             <Date>Saturday 9th April 2022</Date>
           </Listing>
           <Listing>
-            <Artist>Yohan Kebede Trio, w/Harry Ling &amp; Rio Kai</Artist>
+            <Artist>Yohan Kebede, Harry Ling &amp; Rio Kai</Artist>
             <Date>Sunday 10th April 2022</Date>          
           </Listing>
         </Listings>
