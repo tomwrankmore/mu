@@ -50,7 +50,7 @@ const NavList = styled.ul`
 `
 
 const NavLink = styled.a`
-    padding: 0.5rem 0.875rem;
+    padding: 0;
     border-radius: 5px;
     background-color: #fff;
     display: block;
@@ -62,7 +62,7 @@ const NavLink = styled.a`
 `
 
 const StyledLink = styled(Link)`
-    padding: 0.5rem 0.875rem;
+    padding: 0;
     border-radius: 5px;
     background-color: #fff;
     display: block;

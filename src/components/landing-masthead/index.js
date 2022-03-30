@@ -11,6 +11,7 @@ const mastHeadStyles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundPosition: '0 70px'
 }
 
 const HeroWrapper = styled.div`

@@ -31,9 +31,10 @@ const Listings = styled.ul`
 const Listing = styled.li` 
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem;
-  border-bottom: solid 1px gray;
+  padding: 1.5rem 1rem;
+  border-bottom: dotted 1px gray;
   flex-direction: column;
+  margin: 0;
   @media ${device.mediaMinMedium} {
     flex-direction: row;
   }
@@ -46,14 +47,15 @@ const ListingsTitle = styled.h1`
 const Date = styled.span` 
   text-align: center;
   @media ${device.mediaMinMedium} {
-    text-align: left;
+    text-align: right;
   }
 `
 const Artist = styled.span` 
   text-align: center;
   font-weight: bold;
   @media ${device.mediaMinMedium} {
-    text-align: right;
+    text-align: left;
+    margin-right: 1rem;
   }
 `
 
@@ -65,24 +67,24 @@ const SecondPage = () => (
         <ListingsTitle>Listings</ListingsTitle>
         <Listings>
           <Listing>
-              <Date>Wed 6th April 2022</Date>
               <Artist>Ruta Sipola &amp; Menelik Claffey</Artist>
+              <Date>Wed 6th April 2022</Date>
             </Listing>
           <Listing>
-            <Date>Thursday 7th April 2022</Date>
             <Artist> Leon Brichard, Idris Rahman &amp; Emre Ramazanoglu</Artist>
+            <Date>Thursday 7th April 2022</Date>
           </Listing>
           <Listing>
-            <Date>Friday 8th April 2022</Date>
             <Artist> Tom Herbert &amp; Robert Stillman</Artist>
+            <Date>Friday 8th April 2022</Date>
           </Listing>
           <Listing>
-            <Date>Saturday 9th April 2022</Date>
             <Artist>Tom Herbert &amp; Robert Stillman</Artist>
+            <Date>Saturday 9th April 2022</Date>
           </Listing>
           <Listing>
-            <Date>Sunday 10th April 2022</Date>
             <Artist>Yohan Kebede Trio, w/Harry Ling &amp; Rio Kai</Artist>
+            <Date>Sunday 10th April 2022</Date>          
           </Listing>
         </Listings>
       </ListingsContent>
