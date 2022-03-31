@@ -14,8 +14,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   @media ${device.mediaMinMedium} {
-    padding: 1rem;
-    height: 100vh;
+    padding: 150px 1rem 1rem;
   }
 `
 
@@ -72,23 +71,43 @@ const SecondPage = () => (
         <Listings>
           <Listing>
               <Artist>Ruta Sipola &amp; Menelik Claffey</Artist>
-              <Date>Wednesday 6th April 2022</Date>
+              <Date>Wednesday 6th April</Date>
             </Listing>
           <Listing>
             <Artist> Leon Brichard, Idris Rahman &amp; Emre Ramazanoglu</Artist>
-            <Date>Thursday 7th April 2022</Date>
+            <Date>Thursday 7th April</Date>
           </Listing>
           <Listing>
             <Artist> Tom Herbert &amp; Robert Stillman</Artist>
-            <Date>Friday 8th April 2022</Date>
+            <Date>Friday 8th April</Date>
           </Listing>
           <Listing>
             <Artist>Tom Herbert &amp; Robert Stillman</Artist>
-            <Date>Saturday 9th April 2022</Date>
+            <Date>Saturday 9th April</Date>
           </Listing>
           <Listing>
             <Artist>Yohan Kebede, Harry Ling &amp; Rio Kai</Artist>
-            <Date>Sunday 10th April 2022</Date>          
+            <Date>Sunday 10th April</Date>          
+          </Listing>
+          <Listing>
+              <Artist>Yohan Kebede</Artist>
+              <Date>Wednesday 13th April</Date>
+            </Listing>
+          <Listing>
+            <Artist>Leon Brichard, Idris Rahman &amp; Gene Calderazzo</Artist>
+            <Date>Thursday 14th April</Date>
+          </Listing>
+          <Listing>
+            <Artist>Crispin Ade Egun, Yahael Camara-Onono, Jali Bakary Konte, Aboubacar Konate</Artist>
+            <Date>Friday 15th April</Date>
+          </Listing>
+          <Listing>
+            <Artist>Crispin Ade Egun, Yahael Camara-Onono, Jali Bakary Konte, Aboubacar Konate</Artist>
+            <Date>Saturday 16th April</Date>
+          </Listing>
+          <Listing>
+            <Artist>Yohan Kebede, Harry Ling &amp; Rio Kai</Artist>
+            <Date>Sunday 17th April</Date>          
           </Listing>
         </Listings>
       </ListingsContent>
