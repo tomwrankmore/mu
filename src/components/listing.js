@@ -33,11 +33,12 @@ const Artist = styled.span`
 `
 
 const ListingItem = ({listingInfo}) => {
-    const {eventDate, eventDateText, listing} = listingInfo;
+    const {eventDateText, ticketLink, listing} = listingInfo;
     console.log('listingInfo:', listingInfo )
     return (
         <Listing>
             <Artist>{listing}</Artist>
+            {ticketLink ? <a href={ticketLink} target='_blank' rel="noreferrer">Buy ticket</a> : null}
             <Date>{eventDateText}</Date>
         </Listing>
     )

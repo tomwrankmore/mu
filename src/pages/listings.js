@@ -13,13 +13,15 @@ import {device} from '../components/styles/mediaQueries'
 
 export const query = graphql`
     query SettingsQuery {
-      allSanityListings {
+      allSanityListings (sort: { fields: [order], order: ASC }) {
         edges {
           node {
             id
             eventDate
             eventDateText
+            ticketLink
             listing
+            order
           }
         }
       }
