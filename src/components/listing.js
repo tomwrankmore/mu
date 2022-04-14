@@ -21,15 +21,37 @@ const Date = styled.span`
     text-align: right;
   }
 `
+
+const Details = styled.div` 
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 0.875rem;
+    @media ${device.mediaMinMedium} {
+        text-align: left;
+        margin-right: 1rem;
+        margin-bottom: 0;
+  }
+`
+
 const Artist = styled.span` 
-  text-align: center;
   font-weight: bold;
   flex: 1;
+`
 
-  @media ${device.mediaMinMedium} {
-    text-align: left;
-    margin-right: 1rem;
-  }
+const TicketButton = styled.a` 
+    margin: 0.875rem auto;
+    display: block;
+    border: solid 1px #cfcfcf;
+    width: fit-content;
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.875rem;
+
+    @media ${device.mediaMinMedium} {
+        margin: 0.875rem 0 0 0;
+    }
 `
 
 const ListingItem = ({listingInfo}) => {
@@ -37,8 +59,10 @@ const ListingItem = ({listingInfo}) => {
     console.log('listingInfo:', listingInfo )
     return (
         <Listing>
-            <Artist>{listing}</Artist>
-            {ticketLink ? <a href={ticketLink} target='_blank' rel="noreferrer">Buy ticket</a> : null}
+            <Details>
+                <Artist>{listing}</Artist>
+                {ticketLink ? <TicketButton href={ticketLink} target='_blank' rel="noreferrer">Buy ticket</TicketButton> : null}
+            </Details>
             <Date>{eventDateText}</Date>
         </Listing>
     )
