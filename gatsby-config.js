@@ -1,3 +1,13 @@
+// Load variables from `.env` as soon as possible
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV || 'development'}`
+})
+
+const clientConfig = require('./client-config')
+const token = process.env.SANITY_READ_TOKEN
+
+const isProd = process.env.NODE_ENV === 'production'
+
 module.exports = {
   siteMetadata: {
     title: `mu`,
@@ -67,6 +77,20 @@ module.exports = {
           // Defaults to https://www.googletagmanager.com
           // origin: "YOUR_SELF_HOSTED_ORIGIN",
         },
+      },
+    },
+    {
+      resolve: `gatsby-source-sanity`,
+      options: {
+        ...clientConfig.sanity,
+        // a token with read permissions is required
+        // if you have a private dataset
+        token,
+        // If the Sanity GraphQL API was deployed using `--tag <name>`,
+        // use `graphqlTag` to specify the tag name. Defaults to `default`.
+        graphqlTag: 'default',
+        watchMode: !isProd,
+        overlayDrafts: !isProd && token
       },
     },
   ],
