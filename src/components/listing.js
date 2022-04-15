@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import styled from "styled-components"
 import {device} from '../components/styles/mediaQueries'
 
@@ -56,11 +56,19 @@ const TicketButton = styled.a`
 
 const ListingItem = ({listingInfo}) => {
     const {eventDate, ticketLink, listing} = listingInfo;
-    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    const dateObj = new Date(eventDate);
-    const month = months[dateObj.getMonth()];
-    const dateStringAsArray = dateObj.toDateString().split(" ");
-    const formattedDate = `${dateStringAsArray[0]} ${dateStringAsArray[2]}, ${month}`;
+    const [finalDate, setfinalDate] = useState()
+
+    // Check if window is defined (so if in the browser or in node.js).
+    const isBrowser = typeof window !== "undefined"
+
+    useEffect(() => {
+      const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      const dateObj = new window.Date(eventDate);
+      const month = months[dateObj.getMonth()];
+      const dateStringAsArray = dateObj.toDateString().split(" ");
+      const formattedDate = `${dateStringAsArray[0]} ${dateStringAsArray[2]}, ${month}`;
+      setfinalDate(formattedDate)
+    }, [isBrowser])
 
     return (
         <Listing>
@@ -68,7 +76,7 @@ const ListingItem = ({listingInfo}) => {
                 <Artist>{listing}</Artist>
                 {ticketLink ? <TicketButton href={ticketLink} target='_blank' rel="noreferrer">Buy ticket</TicketButton> : null}
             </Details>
-            <Date>{formattedDate}</Date>
+            <Date>{finalDate}</Date>
         </Listing>
     )
 }
