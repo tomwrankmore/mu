@@ -8,7 +8,8 @@ import Layout from "../components/layout"
 import ListingItem from "../components/listing";
 import Seo from "../components/seo"
 import GraphQLErrorList from "../components/graphql-error-list"
-import { Wrapper, ListingsContent, Listings, ListingsTitle } from "./listings.styled";
+import styled from "styled-components"
+import {device} from '../components/styles/mediaQueries'
 
 export const query = graphql`
     query SettingsQuery {
@@ -25,6 +26,37 @@ export const query = graphql`
       }
     }
   `
+
+const Wrapper = styled.div`
+  padding: 170px 1rem 1rem;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media ${device.mediaMinMedium} {
+    padding: 150px 1rem 1rem;
+  }
+`
+
+const ListingsContent = styled.div` 
+  max-width: 100vw;
+  width: 100%;
+  margin: 0 auto;
+  @media ${device.mediaMinMedium} {
+    max-width: 65vw;
+  }
+`
+
+const Listings = styled.ul`
+  margin: 0;
+`
+
+const ListingsTitle = styled.h1` 
+  text-align: center;
+  flex: 1;
+  font-size: 1.875rem;
+`
 
 const SecondPage = props => {
   const { data, errors } = props;
