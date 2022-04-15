@@ -57,7 +57,7 @@ const TicketButton = styled.a`
 const ListingItem = ({listingInfo}) => {
     const {eventDate, ticketLink, listing} = listingInfo;
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    const dateObj = new window.Date(eventDate);
+    const dateObj = new Date(eventDate);
     const month = months[dateObj.getMonth()];
     const dateStringAsArray = dateObj.toDateString().split(" ");
     const formattedDate = `${dateStringAsArray[0]} ${dateStringAsArray[2]}, ${month}`;
