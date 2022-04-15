@@ -16,12 +16,12 @@ import "./layout.css"
 const Main = styled.main` 
   position: relative;
   z-index: 10;
-  margin-bottom: 140px;
+  margin-bottom: 160px;
   background-color: white;
 `
 
 const Footer = styled.footer` 
-  padding: 0 1rem 1rem;
+  padding: 1rem;
   font-size: 0.75rem;
   width: 100%;
   bottom: 0px;
@@ -33,6 +33,7 @@ const Footer = styled.footer`
   position: fixed;
   bottom: 0;
   z-index: 9;
+  background-color: #ccc;
 
   ul {
     margin: 0 0 1rem 0;

@@ -6,9 +6,11 @@ const Listing = styled.li`
   display: flex;
   justify-content: space-between;
   padding: 1.5rem 1rem;
-  border-bottom: dotted 1px gray;
   flex-direction: column;
   margin: 0;
+  &:not(:last-child) {
+    border-bottom: dotted 1px gray;
+  }
   @media ${device.mediaMinMedium} {
     flex-direction: row;
   }

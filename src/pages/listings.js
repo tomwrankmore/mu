@@ -34,8 +34,9 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 2rem;
   @media ${device.mediaMinMedium} {
-    padding: 150px 1rem 1rem;
+    padding: 150px 1rem 4rem;
   }
 `
 
