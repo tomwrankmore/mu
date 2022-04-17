@@ -13,7 +13,7 @@ import {device} from '../components/styles/mediaQueries'
 
 export const query = graphql`
     query SettingsQuery {
-      allSanityListings (sort: { fields: [order], order: ASC }) {
+      allSanityListings(sort: {fields: [eventDate], order: DESC} ) {
         edges {
           node {
             id

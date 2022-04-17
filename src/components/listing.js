@@ -70,7 +70,7 @@ const ListingItem = ({listingInfo}) => {
       const dateStringAsArray = dateObj.toDateString().split(" ");
       const formattedDate = `${dateStringAsArray[0]} ${dateStringAsArray[2]}, ${month}`;
       setfinalDate(formattedDate)
-    }, [isBrowser])
+    }, [isBrowser, eventDate])
 
     return (
         <Listing>
