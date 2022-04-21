@@ -51,6 +51,7 @@ const ListingsContent = styled.div`
 
 const Listings = styled.ul`
   margin: 0;
+  font-size: 0.75rem;
 `
 
 const ListingsTitle = styled.h1` 

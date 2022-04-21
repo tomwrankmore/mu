@@ -5,7 +5,7 @@ import {device} from '../components/styles/mediaQueries'
 const Listing = styled.li` 
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem 1rem;
+  padding: .5rem 1rem;
   flex-direction: column;
   margin: 0;
   &:not(:last-child) {
@@ -29,30 +29,35 @@ const Details = styled.div`
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-bottom: 0.875rem;
+    margin-bottom: 0.25rem;
+    align-items: center;
     @media ${device.mediaMinMedium} {
         text-align: left;
-        margin-right: 1rem;
         margin-bottom: 0;
+        flex-direction: row;
   }
 `
 
 const Artist = styled.span` 
   font-weight: bold;
-  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  /* flex: 1; */
 `
 
 const TicketButton = styled.a` 
-    margin: 0.875rem auto;
+    /* margin: 0.875rem auto; */
     display: block;
     border: solid 1px #cfcfcf;
     width: fit-content;
-    padding: 0.25rem 0.5rem;
+    padding: 0.05rem 0.5rem;
     border-radius: 5px;
-    font-size: 0.875rem;
+    margin: 0.5rem 0;
 
     @media ${device.mediaMinMedium} {
-        margin: 0.875rem 0 0 0;
+        /* margin: 0.875rem 0 0 0; */
+        margin: 0;
     }
 `
 
