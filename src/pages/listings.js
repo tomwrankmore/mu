@@ -58,6 +58,7 @@ const ListingsTitle = styled.h1`
   text-align: center;
   flex: 1;
   font-size: 1.875rem;
+  font-weight: 200;
 `
 
 const SecondPage = props => {
