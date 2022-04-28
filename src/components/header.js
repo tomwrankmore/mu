@@ -4,6 +4,8 @@ import { Link } from "gatsby"
 import styled from 'styled-components'
 import Logo from './logo'
 import {device} from './styles/mediaQueries'
+import {BsInstagram} from 'react-icons/bs'
+
 
 const StyledHeader = styled.header` 
   /* background-color: #f5f5f561; */
@@ -42,6 +44,7 @@ const NavList = styled.ul`
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1rem;
+    display: flex;
 
     &:not(:last-child) {
       margin-right: 1rem;
@@ -56,6 +59,9 @@ const NavLink = styled.a`
     display: block;
     transition: all 0.1s ease-out;
     text-transform: lowercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &:hover {
       text-decoration: underline;
     }
@@ -83,7 +89,10 @@ const Header = ({ siteTitle }) => (
           <StyledLink to="/listings/" target="_blank">listings</StyledLink>
         </li>
         <li>
-          <NavLink href="https://mu.superbexperience.com/reserve/guests" target="_blank">reservations</NavLink>
+          <NavLink href="https://mu.superbexperience.com/reserve/guests" target="_blank" rel="noreferrer">reservations</NavLink>
+        </li>
+        <li>
+          <NavLink href="https://www.instagram.com/mu.ldn/" target="_blank" rel="noreferrer"><BsInstagram/></NavLink>
         </li>
         {/* <li>
           Contact

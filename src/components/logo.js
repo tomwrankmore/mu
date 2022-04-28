@@ -24,7 +24,7 @@ const InvertedQ = styled.span`
 
 const Logo = () => {
     const tom = 'tom';
-
+    console.log(tom);
     return (
         <StyledLogo>
             <Link
