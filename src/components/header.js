@@ -37,6 +37,8 @@ const NavList = styled.ul`
   margin: 0;
   padding: 0;
   display: flex;
+  gap: 1rem;
+  position: relative;
 
   li {
     margin: 0;
@@ -45,19 +47,29 @@ const NavList = styled.ul`
     font-weight: bold;
     font-size: 1rem;
     display: flex;
-
-    &:not(:last-child) {
-      margin-right: 1rem;
+    @media ${device.mediaMinMedium} {
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+    &.ig {
+      position: absolute;
+      left: 50%;
+      top: 180%;
+      transform: translate(-50%, -50%);
+      @media ${device.mediaMinMedium} {
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: translate(0,0);
+      }
     }
   }
 `
 
 const NavLink = styled.a`
     padding: 0;
-    border-radius: 5px;
-    background-color: #fff;
     display: block;
-    transition: all 0.1s ease-out;
     text-transform: lowercase;
     display: flex;
     align-items: center;
@@ -86,17 +98,17 @@ const Header = ({ siteTitle }) => (
     <Nav>
       <NavList>
         <li>
+          <StyledLink to="/menu/" target="_blank">menu</StyledLink>
+        </li>
+        <li>
           <StyledLink to="/listings/" target="_blank">listings</StyledLink>
         </li>
         <li>
           <NavLink href="https://mu.superbexperience.com/reserve/guests" target="_blank" rel="noreferrer">reservations</NavLink>
         </li>
-        <li>
+        <li className="ig">
           <NavLink href="https://www.instagram.com/mu.ldn/" target="_blank" rel="noreferrer"><BsInstagram/></NavLink>
         </li>
-        {/* <li>
-          Contact
-        </li> */}
       </NavList>
     </Nav>
   </StyledHeader>

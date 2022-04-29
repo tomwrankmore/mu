@@ -45,21 +45,20 @@ const ListingsContent = styled.div`
   width: 100%;
   margin: 0 auto;
   @media ${device.mediaMinMedium} {
-    max-width: 65vw;
+    max-width: 600px;
   }
 `
 
 const Listings = styled.ul`
   margin: 0;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 `
 
 const ListingsTitle = styled.h1` 
   text-align: center;
-  flex: 1;
   font-size: 1.875rem;
-  font-weight: 200;
-  margin-bottom: 3rem;
+  font-weight: normal;
+  margin-bottom: 2rem;
 `
 
 const SecondPage = props => {

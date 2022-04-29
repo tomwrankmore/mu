@@ -25,7 +25,7 @@ const Date = styled.span`
 `
 
 const Details = styled.div` 
-    flex: 1;
+    flex: 2;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -43,20 +43,19 @@ const Artist = styled.span`
   display: flex;
   align-items: center;
   margin-right: 1rem;
-  /* flex: 1; */
+  flex: 1;
 `
 
 const TicketButton = styled.a` 
-    /* margin: 0.875rem auto; */
     display: block;
     border: solid 1px #cfcfcf;
     width: fit-content;
     padding: 0.05rem 0.5rem;
     border-radius: 5px;
     margin: 0.5rem 0;
+    font-size: 0.75rem;
 
     @media ${device.mediaMinMedium} {
-        /* margin: 0.875rem 0 0 0; */
         margin: 0;
     }
 `
