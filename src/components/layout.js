@@ -16,7 +16,7 @@ import "./layout.css"
 const Main = styled.main` 
   position: relative;
   z-index: 10;
-  margin-bottom: 160px;
+  margin-bottom: 260px;
   background-color: white;
 `
 
@@ -27,13 +27,14 @@ const Footer = styled.footer`
   bottom: 0px;
   z-index: 1;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   position: fixed;
   bottom: 0;
   z-index: 9;
   background-color: #ccc;
+  text-align: center;
 
   ul {
     margin: 0 0 1rem 0;
@@ -46,7 +47,6 @@ const Footer = styled.footer`
 
   p {
     margin: 0;
-    text-align: right;
   }
 `
 
@@ -69,11 +69,18 @@ const Layout = ({ children }) => {
         <Footer>
           <div>
             <ul>
-              <li>Wed/Thu: 1700 - 2330</li>
-              <li>Fri/Sat: 1700 - 0030</li>
-              <li>Sun: 1600 - 2300</li>
+              <li>reservations: <a href="mailto:reservations@mu-ldn.com">reservations@mu-ldn.com</a></li>
+              <li>all other enquires: <a href="mailto:info@mu-ldn.com">info@mu-ldn.com</a></li>
+              <li>telephone: tbc</li>
             </ul>
             <p>432-434 Kingsland Rd, London E8 4AA</p>
+          </div>
+          <div>
+            <ul>
+              <li>Wed/Thu: 1800 - 2330</li>
+              <li>Fri/Sat: 1800 - 0030</li>
+              <li>Sun: 1800 - 2300</li>
+            </ul>
           </div>
         </Footer>
       </div>
