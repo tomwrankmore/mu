@@ -47,6 +47,7 @@ const SectionTitle = styled.h1`
     font-size: 1.875rem;
     font-weight: normal;
     margin: 0;
+    text-transform: lowercase;
 `
 
 const Menu = styled.ul`

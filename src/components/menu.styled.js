@@ -13,6 +13,7 @@ export const MenuItem = styled.div`
 export const MenuSectionTitle = styled.p`
     font-weight: bold;
     margin: 0 0 0.5rem 0;
+    text-transform: lowercase;
 `
 
 export const Item = styled.p`
