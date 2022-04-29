@@ -13,7 +13,7 @@ const StyledHeader = styled.header`
   margin: 0 1rem;
   position: fixed;
   z-index: 100;
-  padding: 1rem 0 0.5rem 0;
+  padding: 1rem 0 2.5rem 0;
   display: grid;
   grid-template-columns: 1fr;
   background-color: white;
@@ -21,6 +21,7 @@ const StyledHeader = styled.header`
   @media ${device.mediaMinMedium} {
     grid-template-columns: 150px 1fr;
     height: auto;
+    padding: 1rem 0 0.5rem 0;
   }
 `
 
