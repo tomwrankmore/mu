@@ -45,13 +45,17 @@ const ListingsContent = styled.div`
   width: 100%;
   margin: 0 auto;
   @media ${device.mediaMinMedium} {
-    max-width: 600px;
+    max-width: 860px;
   }
 `
 
 const Listings = styled.ul`
   margin: 0;
   font-size: 0.875rem;
+
+  &:first-of-type {
+    margin-bottom: 4rem;
+  }
 `
 
 const ListingsTitle = styled.h1` 
@@ -62,12 +66,17 @@ const ListingsTitle = styled.h1`
   text-transform: lowercase;
 `
 
-const SecondPage = props => {
+const ListingsPage = props => {
   const { data, errors } = props;
 
   const listingsNodes = (data || {}).allSanityListings
   ? mapEdgesToNodes(data.allSanityListings)
   : []
+
+  let today = new Date()
+  today = today.toISOString().split('T')[0]
+
+  const reversedListings =  [...listingsNodes].reverse();
 
   if (errors) {
     return (
@@ -84,14 +93,36 @@ const SecondPage = props => {
         <ListingsContent>
           <ListingsTitle>Listings</ListingsTitle>
           <Listings>
+            {reversedListings && (
+              reversedListings.map((listingInfo, idx) => {
+                if (listingInfo.eventDate >= today) {
+                  return (
+                    <ListingItem 
+                      key={idx} 
+                      today={today}
+                      listingInfo={listingInfo} 
+                    />
+                  )
+                } else {
+                  return null
+                }
+              })
+            )}
+          </Listings>
+          <ListingsTitle>Past Dates</ListingsTitle>
+          <Listings>
             {listingsNodes && (
               listingsNodes.map((listingInfo, idx) => {
-                return (
-                  <ListingItem 
-                    key={idx} 
-                    listingInfo={listingInfo} 
-                  />
-                )
+                if (listingInfo.eventDate < today) {
+                  return (
+                    <ListingItem 
+                      key={idx} 
+                      listingInfo={listingInfo} 
+                    />
+                  )
+                } else {
+                  return null
+                }
               })
             )}
           </Listings>
@@ -100,4 +131,4 @@ const SecondPage = props => {
     </Layout>
   )  
 }
-export default SecondPage
+export default ListingsPage

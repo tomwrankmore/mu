@@ -19,6 +19,7 @@ const Listing = styled.li`
 const Date = styled.span` 
   text-align: center;
   flex: 1;
+  text-transform: lowercase;
   @media ${device.mediaMinMedium} {
     text-align: right;
   }
@@ -43,7 +44,7 @@ const Artist = styled.span`
   display: flex;
   align-items: center;
   margin-right: 1rem;
-  flex: 1;
+  text-transform: lowercase;
 `
 
 const TicketButton = styled.a` 
