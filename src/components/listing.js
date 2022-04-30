@@ -43,21 +43,18 @@ const Artist = styled.span`
   font-weight: bold;
   display: flex;
   align-items: center;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   text-transform: lowercase;
 `
 
 const TicketButton = styled.a` 
     display: block;
-    border: solid 1px #cfcfcf;
     width: fit-content;
-    padding: 0.05rem 0.5rem;
-    border-radius: 5px;
-    margin: 0.5rem 0;
-    font-size: 0.75rem;
-
-    @media ${device.mediaMinMedium} {
-        margin: 0;
+    font-size: 0.875rem;
+    text-transform: lowercase;
+    font-weight: bold;
+    &:hover {
+      text-decoration: underline;
     }
 `
 
@@ -81,7 +78,7 @@ const ListingItem = ({listingInfo}) => {
         <Listing>
             <Details>
                 <Artist>{listing}</Artist>
-                {ticketLink ? <TicketButton href={ticketLink} target='_blank' rel="noreferrer">Buy ticket</TicketButton> : null}
+                {ticketLink ? <>- &nbsp;<TicketButton href={ticketLink} target='_blank' rel="noreferrer">Buy ticket</TicketButton></> : null}
             </Details>
             <Date>{finalDate}</Date>
         </Listing>
