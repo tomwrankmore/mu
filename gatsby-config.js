@@ -93,5 +93,11 @@ module.exports = {
         overlayDrafts: !isProd && token
       },
     },
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: "411230674350752",
+      },
+    },
   ],
 }
