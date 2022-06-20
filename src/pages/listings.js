@@ -10,6 +10,7 @@ import Seo from "../components/seo"
 import GraphQLErrorList from "../components/graphql-error-list"
 import styled from "styled-components"
 import {device} from '../components/styles/mediaQueries'
+import { Paragraph } from "../components/styles/paragraph.styled";
 
 export const query = graphql`
     query SettingsQuery {
@@ -59,11 +60,12 @@ const Listings = styled.ul`
 `
 
 const ListingsTitle = styled.h1` 
-  text-align: center;
+  text-align: left;
   font-size: 1.875rem;
   font-weight: normal;
   margin-bottom: 2rem;
   text-transform: lowercase;
+  padding-left: 1rem;
 `
 
 const ListingsPage = props => {
@@ -91,7 +93,8 @@ const ListingsPage = props => {
       <Seo title="Listings" />
       <Wrapper>
         <ListingsContent>
-          <ListingsTitle>Listings</ListingsTitle>
+          <ListingsTitle>music</ListingsTitle>
+          <Paragraph style={{padding: '0 1rem'}}>We present live music every night performed by a rotation of residents and guests. Each night there at two performances, one at around 730pm and another at around 9pm. Both performances are approximately 45 - 60 mins long. If you book a table you will catch at least one of the performances. Booking is recommended but we also welcome walk-ins.</Paragraph>
           <Listings>
             {reversedListings && (
               reversedListings.map((listingInfo, idx) => {
