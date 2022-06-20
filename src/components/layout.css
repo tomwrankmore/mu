@@ -64,8 +64,9 @@ template {
 a {
   background-color: transparent;
   color: hsla(0, 0%, 0%, 0.8);
-  text-decoration: underline;
+  text-decoration: none;
   -webkit-text-decoration-skip: objects;
+  font-weight: bold;
 }
 
 a:active,
