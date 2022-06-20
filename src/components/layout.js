@@ -71,7 +71,7 @@ const Layout = ({ children }) => {
             <ul>
               <li>reservations: <a href="mailto:reservations@mu-ldn.com">reservations@mu-ldn.com</a></li>
               <li>all other enquires: <a href="mailto:info@mu-ldn.com">info@mu-ldn.com</a></li>
-              <li>telephone: tbc</li>
+              <li>telephone: 020 7209 4187</li>
             </ul>
             <p>432-434 Kingsland Rd, London E8 4AA</p>
           </div>
