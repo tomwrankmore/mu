@@ -94,7 +94,7 @@ const ListingsPage = props => {
       <Wrapper>
         <ListingsContent>
           <ListingsTitle>music</ListingsTitle>
-          <Paragraph style={{padding: '0 1rem'}}>We present live music every night performed by a rotation of residents and guests. Each night there at two performances, one at around 730pm and another at around 9pm. Both performances are approximately 45 - 60 mins long. If you book a table you will catch at least one of the performances. Booking is recommended but we also welcome walk-ins.</Paragraph>
+          <Paragraph style={{padding: '0 1rem'}}>We present live music every night performed by a rotation of residents and guests. Each night there are two performances, one at around 730pm and another at around 9pm. Both performances are approximately 45 - 60 mins long. If you book a table you will catch at least one of the performances. Booking is recommended but we also welcome walk-ins.</Paragraph>
           <Listings>
             {reversedListings && (
               reversedListings.map((listingInfo, idx) => {
