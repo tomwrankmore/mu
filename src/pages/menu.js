@@ -75,9 +75,9 @@ const MenuPage = (props) => {
                 <Menu>
                     <MenuSection title='Snacks' data={data.allSanitySnacks}/>
                     <MenuSection title='Raw'  data={data.allSanityRaw}/>
-                    <MenuSection title='Sides'  data={data.allSanitySides}/>
                     <MenuSection title='Robata Grill'  data={data.allSanityRobataGrill}/>
                     <MenuSection title='Fried'  data={data.allSanityFried}/>
+                    <MenuSection title='Sides'  data={data.allSanitySides}/>
                     <MenuSection title='Dessert'  data={data.allSanityDessert}/>
                 </Menu>
             </Wrapper>
