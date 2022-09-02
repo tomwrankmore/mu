@@ -11,7 +11,7 @@ const isProd = process.env.NODE_ENV === 'production'
 module.exports = {
   siteMetadata: {
     title: `mu`,
-    description: `Mu is a Live music, robata grill, wine & cocktails venue from the team behind Brilliant Corners.`,
+    description: `“mu”. new bar, restaurant and live music venue from the team behind Brilliant Corners`,
     author: `Tom Wrankmore`,
     siteUrl: `http://mu-ldn.com/`,
   },
