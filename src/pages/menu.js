@@ -16,6 +16,26 @@ export const query = graphql`
         allSanityRobataGrill(sort: {fields: [order], order: ASC}) { edges { node { price item order } } }
         allSanityFried(sort: {fields: [order], order: ASC}) { edges { node { price item order } } }
         allSanityDessert(sort: {fields: [order], order: ASC}) { edges { node { price item order } } }
+        food: file(name: {eq: "food_menu"}) {
+            id
+            publicURL
+            name
+        }
+        bar: file(name: {eq: "bar_food"}) {
+            id
+            publicURL
+            name
+        }
+        drinks: file(name: {eq: "drinks"}) {
+            id
+            publicURL
+            name
+        }
+        wine: file(name: {eq: "wine_list"}) {
+            id
+            publicURL
+            name
+        }
     }
   `
 
@@ -55,10 +75,51 @@ const Menu = styled.ul`
     margin: 0;
     width: 100%;
     max-width: 600px;
+    /* background-color: pink; */
+    li {
+        text-align: center;
+        
+        padding: 0 0 1rem 0;
+        margin: 0 0 1rem 0;
+        a {
+            padding: 0;
+        }
+    }
+    li:not(:last-child) {
+        border-bottom: solid 1px;
+    }
+`
+
+const MenuUl = styled.ul`
+    text-align: center;
+    margin: 0;
+    li {
+        padding: 1rem 0;
+        margin: 0;
+    }
+    li:not(:last-child) {
+        border-bottom: solid 1px black;
+    }
+`
+
+const MenuLink = styled.a`
+    font-size: clamp(1rem, 10vw, 2rem); 
+    transition: all 0.2s;
+    display: block;
+    width: 100%;
+    &:hover {
+        text-decoration: none;
+        transform: scale(1.015);
+    }
+    @media ${device.mediaMinMedium} {
+        width: 25vw;
+    }
 `
 
 const MenuPage = (props) => {
     const { data } = props;
+
+    console.log("data", data.food.publicURL)
 
     // Check if window is defined (so if in the browser or in node.js).
     // const isBrowser = typeof window !== "undefined"
@@ -67,19 +128,49 @@ const MenuPage = (props) => {
         <Layout>
             <Seo title="Menu" />
             <Wrapper>
-                <MenuHeader>
+                {/* <MenuHeader>
                     <SectionTitle>Menu</SectionTitle>
                     <p style={{margin: 0}}>£</p>
-                </MenuHeader>
+                </MenuHeader> */}
+
+                {/* <Menu>
+                    {data.allFile.edges.map((file, index) => (
+                    <li key={index}>
+                        <a href={file.node.publicURL} target="_blank" rel="noreferrer">
+                            {file.node.name}
+                        </a>
+                    </li>
+                    ))}
+                </Menu> */}
+
+                <MenuUl>
+                    <li>
+                        <MenuLink href={data.food.publicURL} target="_blank" rel="noreferrer">Food</MenuLink>
+                    </li>
+                    <li>
+                        <MenuLink href={data.bar.publicURL} target="_blank" rel="noreferrer">Bar Food</MenuLink>
+                    </li>
+                    <li>
+                        <MenuLink href={data.wine.publicURL} target="_blank" rel="noreferrer">Wine List</MenuLink>
+                    </li>
+                    <li>
+                        <MenuLink href={data.drinks.publicURL} target="_blank" rel="noreferrer">Drinks</MenuLink>
+                    </li>
+                </MenuUl>
+
                 
-                <Menu>
+                
+               
+                
+                
+                {/* <Menu>
                     <MenuSection title='Snacks' data={data.allSanitySnacks}/>
                     <MenuSection title='Raw'  data={data.allSanityRaw}/>
                     <MenuSection title='Robata Grill'  data={data.allSanityRobataGrill}/>
                     <MenuSection title='Fried'  data={data.allSanityFried}/>
                     <MenuSection title='Sides'  data={data.allSanitySides}/>
                     <MenuSection title='Dessert'  data={data.allSanityDessert}/>
-                </Menu>
+                </Menu> */}
             </Wrapper>
         </Layout>
     )
