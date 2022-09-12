@@ -145,23 +145,18 @@ const MenuPage = (props) => {
 
                 <MenuUl>
                     <li>
-                        <MenuLink href={data.food.publicURL} target="_blank" rel="noreferrer">Food</MenuLink>
+                        <MenuLink href={data.food.publicURL} target="_blank" rel="noreferrer">menu</MenuLink>
                     </li>
                     <li>
-                        <MenuLink href={data.bar.publicURL} target="_blank" rel="noreferrer">Bar Food</MenuLink>
+                        <MenuLink href={data.bar.publicURL} target="_blank" rel="noreferrer">bar menu</MenuLink>
                     </li>
                     <li>
-                        <MenuLink href={data.wine.publicURL} target="_blank" rel="noreferrer">Wine List</MenuLink>
+                        <MenuLink href={data.drinks.publicURL} target="_blank" rel="noreferrer">drinks</MenuLink>
                     </li>
                     <li>
-                        <MenuLink href={data.drinks.publicURL} target="_blank" rel="noreferrer">Drinks</MenuLink>
+                        <MenuLink href={data.wine.publicURL} target="_blank" rel="noreferrer">wine list</MenuLink>
                     </li>
                 </MenuUl>
-
-                
-                
-               
-                
                 
                 {/* <Menu>
                     <MenuSection title='Snacks' data={data.allSanitySnacks}/>
