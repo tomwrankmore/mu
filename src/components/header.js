@@ -105,7 +105,7 @@ const Header = ({ siteTitle }) => (
           <StyledLink to="/listings/" target="_blank">music</StyledLink>
         </li>
         <li>
-          <StyledLink to="/menu/" target="_blank">menu</StyledLink>
+          <StyledLink to="/menu/" target="_blank">menus</StyledLink>
         </li>
         <li>
           <NavLink href="https://mu.superbexperience.com/reserve/guests" target="_blank" rel="noreferrer">reservations</NavLink>
