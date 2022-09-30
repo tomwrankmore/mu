@@ -98,7 +98,7 @@ const Header = ({ siteTitle }) => (
         <Logo />
     <Nav>
       <NavList>
-      <li>
+        <li>
           <StyledLink to="/about/" target="_blank">about</StyledLink>
         </li>
         <li>
@@ -109,6 +109,9 @@ const Header = ({ siteTitle }) => (
         </li>
         <li>
           <NavLink href="https://mu.superbexperience.com/reserve/guests" target="_blank" rel="noreferrer">reservations</NavLink>
+        </li>
+        <li>
+          <StyledLink to="/faq/" target="_blank">faq</StyledLink>
         </li>
         <li className="ig">
           <NavLink href="https://www.instagram.com/mu.ldn/" target="_blank" rel="noreferrer"><BsInstagram/></NavLink>
