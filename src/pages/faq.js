@@ -116,8 +116,7 @@ performance fees we pre-agree with each musician that plays.</Answer>
                         </li>
                         <li>
                             <Question>Can I talk during the live music performances?</Question>
-                            <Answer>Yes you can. We are trying to create an intimate but informal atmosphere. But please
-however be respectful to both your neighbours and the musicians.</Answer>
+                            <Answer>Yes you can. We are trying to create an intimate but informal atmosphere. But please however be respectful to other guests and the musicians.</Answer>
                         </li>
                     </FaqList>
                 </AboutSection>
