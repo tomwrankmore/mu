@@ -16,22 +16,22 @@ export const query = graphql`
         allSanityRobataGrill(sort: {fields: [order], order: ASC}) { edges { node { price item order } } }
         allSanityFried(sort: {fields: [order], order: ASC}) { edges { node { price item order } } }
         allSanityDessert(sort: {fields: [order], order: ASC}) { edges { node { price item order } } }
-        food: file(name: {eq: "food_menu"}) {
+        food: file(name: {eq: "Mu_Menu"}) {
             id
             publicURL
             name
         }
-        bar: file(name: {eq: "bar_food"}) {
+        bar: file(name: {eq: "Mu_Bar_Menu"}) {
             id
             publicURL
             name
         }
-        drinks: file(name: {eq: "drinks"}) {
+        drinks: file(name: {eq: "Mu_Cocktails_Drinks"}) {
             id
             publicURL
             name
         }
-        wine: file(name: {eq: "wine_list"}) {
+        wine: file(name: {eq: "Mu_Wine_List"}) {
             id
             publicURL
             name
