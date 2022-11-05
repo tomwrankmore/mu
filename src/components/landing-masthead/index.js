@@ -10,7 +10,7 @@ const mastHeadStyles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundPosition: '0 70px',
+    backgroundPosition: 'center center',
     backgroundAttachment: 'fixed'
 }
 
@@ -24,7 +24,7 @@ const LandingMasthead = () => {
     const { backgroundImage123 } = useStaticQuery(
         graphql`
             query {
-                backgroundImage123: file(relativePath: {eq: "mu-bg.jpg"}) {
+                backgroundImage123: file(relativePath: {eq: "mu__interior.jpeg"}) {
                     childImageSharp {
                     gatsbyImageData(
                         width: 2000, 

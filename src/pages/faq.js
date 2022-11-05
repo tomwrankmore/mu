@@ -106,9 +106,7 @@ usually two performances, timings are approximately as follows:</Answer>
                     <FaqList>
                         <li>
                             <Question>Is the live music free?</Question>
-                            <Answer>There is an optional £8 per person cover charge which is added to the bills of guests who are
-seated during the performances. The cover charge we collect goes towards the fixed
-performance fees we pre-agree with each musician that plays.</Answer>
+                            <Answer>There is an optional £8 per person cover charge which is added to the bills of guests who areseated during the performances. The cover charge we collect goes towards the fixed performance fees we pre-agree with each musician that plays.</Answer>
                         </li>
                         <li>
                             <Question>Can I come for dinner even if I don't care about the music?</Question>
