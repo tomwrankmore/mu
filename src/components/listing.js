@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import styled from "styled-components"
 import {device} from '../components/styles/mediaQueries'
+import { BsLink45Deg } from 'react-icons/bs';
 
 const Listing = styled.li` 
   display: flex;
@@ -40,7 +41,7 @@ const Details = styled.div`
 `
 
 const Artist = styled.span` 
-  font-weight: bold;
+  /* font-weight: bold; */
   display: flex;
   align-items: center;
   margin-right: 0.5rem;
@@ -48,18 +49,21 @@ const Artist = styled.span`
 `
 
 const TicketButton = styled.a` 
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: fit-content;
     font-size: 0.875rem;
     text-transform: lowercase;
     font-weight: bold;
+
     &:hover {
-      text-decoration: underline;
+     text-decoration: underline;
     }
 `
 
 const ListingItem = ({listingInfo}) => {
-    const {eventDate, ticketLink, listing} = listingInfo;
+    const {eventDate, ticketLink, artistUrl, listing} = listingInfo;
     const [finalDate, setfinalDate] = useState()
 
     // Check if window is defined (so if in the browser or in node.js).
@@ -78,7 +82,8 @@ const ListingItem = ({listingInfo}) => {
         <Listing>
             <Details>
                 <Artist>{listing}</Artist>
-                {ticketLink ? <>- &nbsp;<TicketButton href={ticketLink} target='_blank' rel="noreferrer">Buy ticket</TicketButton></> : null}
+                {artistUrl ? <>- &nbsp;<TicketButton href={artistUrl} target='_blank' rel="noreferrer">More info <BsLink45Deg/></TicketButton></> : null}
+                {ticketLink ? <>- &nbsp;<TicketButton href={ticketLink} target='_blank' rel="noreferrer">Buy ticket </TicketButton></> : null}
             </Details>
             <Date>{finalDate}</Date>
         </Listing>
