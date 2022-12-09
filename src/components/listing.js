@@ -55,7 +55,7 @@ const TicketButton = styled.a`
     width: fit-content;
     font-size: 0.875rem;
     text-transform: lowercase;
-    font-weight: bold;
+    font-weight: normal;
 
     &:hover {
      text-decoration: underline;
@@ -65,6 +65,8 @@ const TicketButton = styled.a`
 const ListingItem = ({listingInfo}) => {
     const {eventDate, ticketLink, artistUrl, listing} = listingInfo;
     const [finalDate, setfinalDate] = useState()
+
+    console.log('artistUrl:', artistUrl)
 
     // Check if window is defined (so if in the browser or in node.js).
     const isBrowser = typeof window !== "undefined"
@@ -81,8 +83,9 @@ const ListingItem = ({listingInfo}) => {
     return (
         <Listing>
             <Details>
-                <Artist>{listing}</Artist>
-                {artistUrl ? <>- &nbsp;<TicketButton href={artistUrl} target='_blank' rel="noreferrer">More info <BsLink45Deg/></TicketButton></> : null}
+                <Artist>
+                  {artistUrl ? <a href={artistUrl} target="_blank" rel='noreferrer'>{listing}</a> : `${listing}`}
+                </Artist>
                 {ticketLink ? <>- &nbsp;<TicketButton href={ticketLink} target='_blank' rel="noreferrer">Buy ticket </TicketButton></> : null}
             </Details>
             <Date>{finalDate}</Date>
