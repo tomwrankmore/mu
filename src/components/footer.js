@@ -47,7 +47,7 @@ const Footer = (props) => {
               </div>
               <div>
               <ul>
-                  <li>Wed/Thu: 1800 - 2330</li>
+                  <li>Tue/Wed/Thu: 1800 - 2330</li>
                   <li>Fri/Sat: 1800 - 0030</li>
                   <li>Sun: 1800 - 2300</li>
               </ul>
