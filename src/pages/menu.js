@@ -10,31 +10,32 @@ import MenuSection from '../components/menu-section'
 
 export const query = graphql`
     query MyQuery {
-        allSanitySnacks(sort: {fields: [order], order: ASC}) { edges { node { price item order } } }
-        allSanityRaw(sort: {fields: [order], order: ASC}) { edges { node { price item order } } }
-        allSanitySides(sort: {fields: [order], order: ASC}) { edges { node { price item order } } }
-        allSanityRobataGrill(sort: {fields: [order], order: ASC}) { edges { node { price item order } } }
-        allSanityFried(sort: {fields: [order], order: ASC}) { edges { node { price item order } } }
-        allSanityDessert(sort: {fields: [order], order: ASC}) { edges { node { price item order } } }
-        food: file(name: {eq: "Mu_Menu"}) {
-            id
-            publicURL
-            name
+        # allSanitySnacks(sort: {fields: [order], order: ASC}) { edges { node { price item order } } }
+        # allSanityRaw(sort: {fields: [order], order: ASC}) { edges { node { price item order } } }
+        # allSanitySides(sort: {fields: [order], order: ASC}) { edges { node { price item order } } }
+        # allSanityRobataGrill(sort: {fields: [order], order: ASC}) { edges { node { price item order } } }
+        # allSanityFried(sort: {fields: [order], order: ASC}) { edges { node { price item order } } }
+        # allSanityDessert(sort: {fields: [order], order: ASC}) { edges { node { price item order } } }
+        menu: sanityMenu {
+          pdf {
+            asset {
+              url
+            }
+          }
         }
-        bar: file(name: {eq: "Mu_Bar_Menu"}) {
-            id
-            publicURL
-            name
+        drinks: sanityDrinks {
+          pdf {
+            asset {
+              url
+            }
+          }
         }
-        drinks: file(name: {eq: "Mu_Cocktails_Drinks"}) {
-            id
-            publicURL
-            name
-        }
-        wine: file(name: {eq: "Mu_Wine_List"}) {
-            id
-            publicURL
-            name
+        wine:sanityWine {
+          pdf {
+            asset {
+              url
+            }
+          }
         }
     }
   `
@@ -119,8 +120,6 @@ const MenuLink = styled.a`
 const MenuPage = (props) => {
     const { data } = props;
 
-    console.log("data", data.food.publicURL)
-
     // Check if window is defined (so if in the browser or in node.js).
     // const isBrowser = typeof window !== "undefined"
 
@@ -145,16 +144,13 @@ const MenuPage = (props) => {
 
                 <MenuUl>
                     <li>
-                        <MenuLink href={data.food.publicURL} target="_blank" rel="noreferrer">menu</MenuLink>
+                        <MenuLink href={data.menu.pdf.asset.url} target="_blank" rel="noreferrer">menu</MenuLink>
                     </li>
                     <li>
-                        <MenuLink href={data.bar.publicURL} target="_blank" rel="noreferrer">bar menu</MenuLink>
+                        <MenuLink href={data.drinks.pdf.asset.url} target="_blank" rel="noreferrer">drinks</MenuLink>
                     </li>
                     <li>
-                        <MenuLink href={data.drinks.publicURL} target="_blank" rel="noreferrer">drinks</MenuLink>
-                    </li>
-                    <li>
-                        <MenuLink href={data.wine.publicURL} target="_blank" rel="noreferrer">wine list</MenuLink>
+                        <MenuLink href={data.wine.pdf.asset.url} target="_blank" rel="noreferrer">wine list</MenuLink>
                     </li>
                 </MenuUl>
                 

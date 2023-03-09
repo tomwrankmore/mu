@@ -22,7 +22,6 @@ export const query = graphql`
             ticketLink
             artistUrl
             listing
-            order
           }
         }
       }
