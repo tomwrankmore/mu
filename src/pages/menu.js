@@ -23,6 +23,13 @@ export const query = graphql`
             }
           }
         }
+        setMenu: sanitySetMenu {
+          pdf {
+            asset {
+              url
+            }
+          }
+        }
         drinks: sanityDrinks {
           pdf {
             asset {
@@ -145,6 +152,9 @@ const MenuPage = (props) => {
                 <MenuUl>
                     <li>
                         <MenuLink href={data.menu.pdf.asset.url} target="_blank" rel="noreferrer">menu</MenuLink>
+                    </li>
+                    <li>
+                        <MenuLink href={data.setMenu.pdf.asset.url} target="_blank" rel="noreferrer">set menu</MenuLink>
                     </li>
                     <li>
                         <MenuLink href={data.drinks.pdf.asset.url} target="_blank" rel="noreferrer">drinks</MenuLink>
