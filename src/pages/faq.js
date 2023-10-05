@@ -77,7 +77,7 @@ const FaqPage = (props) => {
                         </li>
                         <li>
                             <Question>When is the live music?</Question>
-                            <Answer>6 days a week. Please check the listings section for details of who is playing when. There are usually two performances, timings are approximately as follows:</Answer>
+                            <Answer>5 days a week. Please check the listings section for details of who is playing when. There are usually two performances, timings are approximately as follows:</Answer>
                         </li>
                     </FaqList>
                     <Table>
@@ -87,7 +87,7 @@ const FaqPage = (props) => {
                             <th>Performance 2</th>
                         </tr>
                         <tr>
-                            <td>Tuesday, Wednesday &amp; Thursday</td>
+                            <td>Wednesday &amp; Thursday</td>
                             <td>1930 - 2030</td>
                             <td>2100 - 2200</td>
                         </tr>
