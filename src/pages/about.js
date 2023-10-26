@@ -71,7 +71,7 @@ const AboutPage = (props) => {
                 <AboutSection>
                     <SectionTitle>About</SectionTitle>
                     <Paragraph>“mu” is a bar, restaurant and live music venue from the team behind <a href="https://brilliantcornerslondon.co.uk/" target="_blank" rel="noreferrer">brilliant corners</a>, <a href="http://giant--steps.com/" target="_blank" rel="noreferrer">GIANT STEPS</a> and <a href="https://idle-moments.com/" target="_blank" rel="noreferrer">Idle Moments</a>.</Paragraph>
-                    <Paragraph>Alongside classic cocktails and a carefully curated wine list, we serve a Japanese food which is focussed around fireside cooking from a robata grill. We also present live music every night. For more details, see our music programme.</Paragraph>
+                    <Paragraph>Alongside classic cocktails and a carefully curated wine list, we serve a Japanese food which is focussed around fireside cooking from a robata grill. We also present live music Wednesday to Sunday. For more details, see our <Link to="/listings">music programme</Link>.</Paragraph>
                 </AboutSection>
             </Wrapper>
         </Layout>
