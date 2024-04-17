@@ -114,7 +114,7 @@ const Header = ({ siteTitle }) => (
           <StyledLink to="/faq/" target="_blank">faq</StyledLink>
         </li>
         <li>
-          <NavLink to="https://idle-moments.com/products/mu-gift-card-1" target="_blank" rel="noreferrer">gift cards</NavLink>
+          <NavLink href="https://idle-moments.com/products/mu-gift-card-1" target="_blank" rel="noreferrer">gift cards</NavLink>
         </li>
         <li className="ig">
           <NavLink href="https://www.instagram.com/mu.ldn/" target="_blank" rel="noreferrer"><BsInstagram/></NavLink>
