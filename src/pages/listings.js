@@ -1,32 +1,30 @@
 import * as React from "react"
 // import { Link } from "gatsby"
-import { graphql } from "gatsby";
-import {
-  mapEdgesToNodes,
-} from "../lib/helpers";
+import { graphql } from "gatsby"
+import { mapEdgesToNodes } from "../lib/helpers"
 import Layout from "../components/layout"
-import ListingItem from "../components/listing";
+import ListingItem from "../components/listing"
 import Seo from "../components/seo"
 import GraphQLErrorList from "../components/graphql-error-list"
 import styled from "styled-components"
-import {device} from '../components/styles/mediaQueries'
-import { Paragraph } from "../components/styles/paragraph.styled";
+import { device } from "../components/styles/mediaQueries"
+import { Paragraph } from "../components/styles/paragraph.styled"
 
 export const query = graphql`
-    query SettingsQuery {
-      allSanityListings(sort: {fields: [eventDate], order: DESC} ) {
-        edges {
-          node {
-            id
-            eventDate
-            ticketLink
-            artistUrl
-            listing
-          }
+  query SettingsQuery {
+    allSanityListings(sort: { fields: [eventDate], order: DESC }) {
+      edges {
+        node {
+          id
+          eventDate
+          ticketLink
+          artistUrl
+          listing
         }
       }
     }
-  `
+  }
+`
 
 const Wrapper = styled.div`
   padding: 170px 1rem 1rem;
@@ -41,7 +39,7 @@ const Wrapper = styled.div`
   }
 `
 
-const ListingsContent = styled.div` 
+const ListingsContent = styled.div`
   max-width: 100vw;
   width: 100%;
   margin: 0 auto;
@@ -59,7 +57,7 @@ const Listings = styled.ul`
   }
 `
 
-const ListingsTitle = styled.h1` 
+const ListingsTitle = styled.h1`
   text-align: left;
   font-size: 1.875rem;
   font-weight: normal;
@@ -69,23 +67,23 @@ const ListingsTitle = styled.h1`
 `
 
 const ListingsPage = props => {
-  const { data, errors } = props;
+  const { data, errors } = props
 
   const listingsNodes = (data || {}).allSanityListings
-  ? mapEdgesToNodes(data.allSanityListings)
-  : []
+    ? mapEdgesToNodes(data.allSanityListings)
+    : []
 
   let today = new Date()
-  today = today.toISOString().split('T')[0]
+  today = today.toISOString().split("T")[0]
 
-  const reversedListings =  [...listingsNodes].reverse();
+  const reversedListings = [...listingsNodes].reverse()
 
   if (errors) {
     return (
       <Layout>
         <GraphQLErrorList errors={errors} />
       </Layout>
-    );
+    )
   }
 
   return (
@@ -94,26 +92,32 @@ const ListingsPage = props => {
       <Wrapper>
         <ListingsContent>
           <ListingsTitle>music</ListingsTitle>
-          <Paragraph style={{padding: '0 1rem'}}>We present live music every night performed by a rotation of residents and guests. Each night there are two performances, one at around 730pm and another at around 9pm. Both performances are approximately 45 - 60 mins long. If you book a table you will catch at least one of the performances. Booking is recommended but we also welcome walk-ins.</Paragraph>
+          <Paragraph style={{ padding: "0 1rem" }}>
+            We present live music every night performed by a rotation of
+            residents and guests. Each night there are two performances, one at
+            around 730pm and another at around 9pm. Both performances are
+            approximately 45 - 60 mins long. If you book a table you will catch
+            at least one of the performances. Booking is recommended but we also
+            welcome walk-ins.
+          </Paragraph>
           <Listings>
-            {reversedListings && (
+            {reversedListings &&
               reversedListings.map((listingInfo, idx) => {
                 if (listingInfo.eventDate >= today) {
                   return (
-                    <ListingItem 
-                      key={idx} 
+                    <ListingItem
+                      key={idx}
                       today={today}
-                      listingInfo={listingInfo} 
+                      listingInfo={listingInfo}
                     />
                   )
                 } else {
                   return null
                 }
-              })
-            )}
+              })}
           </Listings>
-          <ListingsTitle>Past Dates</ListingsTitle>
-          <Listings>
+          {/* <ListingsTitle>Past Dates</ListingsTitle>
+           <Listings>
             {listingsNodes && (
               listingsNodes.map((listingInfo, idx) => {
                 if (listingInfo.eventDate < today) {
@@ -128,10 +132,10 @@ const ListingsPage = props => {
                 }
               })
             )}
-          </Listings>
+          </Listings> */}
         </ListingsContent>
       </Wrapper>
     </Layout>
-  )  
+  )
 }
 export default ListingsPage
