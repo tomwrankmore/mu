@@ -66,8 +66,6 @@ const ListingItem = ({ listingInfo }) => {
   const { eventDate, ticketLink, artistUrl, listing } = listingInfo
   const [finalDate, setfinalDate] = useState()
 
-  console.log("artistUrl:", artistUrl)
-
   // Check if window is defined (so if in the browser or in node.js).
   const isBrowser = typeof window !== "undefined"
 
